@@ -3,13 +3,13 @@ This project is intended to provide a dynamic website
 that will be resourceful to Beekeepers & relevant stakeholders.
 Also, it will be centred on addressing or rather pursuing the implementation
 of Sustainable Development Goals (SDGs) namely'
-I. Zero Hunger
-II.Good health & Hunger
-III.No Poverty
-IV. Life on Land
-V. Decent work & economic growth
-VI.  Responsible consumption & production
-VII. Climate Action
+- I. Zero Hunger
+- II. Good health & Hunger
+- III. No Poverty
+- IV. Life on Land
+- V. Decent work & economic growth
+- VI. Responsible consumption & production
+- VII. Climate Action
 
 ## Concept
 The core principle of this project is mainly based on addressing the issue of unemployment,
