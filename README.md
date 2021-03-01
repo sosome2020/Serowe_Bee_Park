@@ -41,7 +41,7 @@ https://drive.google.com/file/d/1_FjYidbTcF3nXKeuPoklIfv0zXIZsNtp/view?usp=shari
 https://drive.google.com/file/d/1yXlCQXUPYSqUKZvGbHfaiL540tFWLEeT/view?usp=sharing
 
 ## Screen transition diagram
-https://drive.google.com/file/d/1LwnyVA0yUPiyVxy5DAN8Bh6Iyg9PgLp6/view?usp=sharing
+https://drive.google.com/file/d/1BVcEbIZzkXCjsQFu0NhocPU55wrnJu4q/view?usp=sharing
 
 ## Wire frame
 https://drive.google.com/file/d/1Pk8p_y4uJEnxSSrMXDDj_ArNxCch06Yj/view?usp=sharing
