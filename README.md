@@ -1,8 +1,19 @@
 ## Overview
-Website for managing an apiary (Beekeeping).
+This project is intended to provide a dynamic website
+that will be resourceful to Beekeepers & relevant stakeholders.
+Also, it will be centred on addressing or rather pursuing the implementation
+of Sustainable Development Goals (SDGs) namely'
+I. Zero Hunger
+II.Good health & Hunger
+III.No Poverty
+IV. Life on Land
+V. Decent work & economic growth
+VI.  Responsible consumption & production
+VII. Climate Action
 
 ## Concept
-Website that raises awareness and importance of beekeeping.
+The core principle of this project is mainly based on addressing the issue of unemployment,
+sustainable farming as well as raising awareness and importance of beekeeping (Apiary) in the ecosystem.
 
 ## Version
 Ruby 2.6.5
