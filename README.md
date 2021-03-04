@@ -47,7 +47,7 @@ https://drive.google.com/file/d/1BVcEbIZzkXCjsQFu0NhocPU55wrnJu4q/view?usp=shari
 https://drive.google.com/file/d/1Pk8p_y4uJEnxSSrMXDDj_ArNxCch06Yj/view?usp=sharing
 
 ## ER Diagram
-https://drive.google.com/file/d/1NMm-dgdC2lxbGUbMHfAUCLWGh2HjyD9r/view?usp=sharing
+https://drive.google.com/file/d/1PmeB2xdAbrsjm5xoSMKLEdz1j5-oaFm9/view?usp=sharing
 
 ## To be used Gem
 * carrierwave

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ApiaryGraduationTask</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ManyoTask</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +10,30 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="first">
+        <button type="button" class="btn btn-warning btn-xs"><%= link_to "Task", tasks_path %></button>
+      <button type="button" class="btn btn-primary btn-xs"><%= link_to "New Task", new_task_path %></button>
+      </div>
+    </header>
+      <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
+      <% if logged_in? %>
+      <%= link_to "Home Page", user_path(current_user.id) %>
+      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+      <%= link_to "Tasks List", tasks_path(current_user.id) %>
+      <%= link_to "Labels", labels_path %>
+      <% if current_user.admin? %>
+      <%= link_to "User Management", admin_users_path(current_user.id)%>
+      <% end %>
+      <% else %>
+      <%= link_to "Sign up", new_user_path %>
+      <%= link_to "Login", new_session_path %>
+      <% end %>
     <%= yield %>
+    <footer class="footer">
+    <p>Copyright © 2020 task management system inc, All RIGHTS RESERVED.</p>
+  </footer>
   </body>
 </html>
