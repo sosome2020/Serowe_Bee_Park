@@ -1,47 +1,22 @@
 <p id="notice"><%= notice %></p>
 <%= search_form_for @q do |f| %>
-      <%= sort_link(@q, :expiration_date, 'deadline', default_order: :desc) %>
-      <%= sort_link(@q, :priority, 'priority', default_order: :desc) %>
+      <%= sort_link(@q, :created_at, 'Date of Creation', default_order: :desc) %>
+      <%= sort_link(@q, :unit_price, 'Unit Price', default_order: :desc) %>
   <%= f.label :title %>
-  <%= f.search_field :task_name_cont, placeholder: "title" %>
-  <%= f.label :status %>
-  <%= f.search_field :status_cont, placeholder: 'Status' %>
-  <%= f.select :labels_id_eq_any, options_from_collection_for_select(current_user.labels.all,:id, :name), :prompt => "Select Labels", :id => 'label_ids' %>
+  <%= f.search_field :name_cont, placeholder: "Name of the equipment" %>
   <%= f.submit "search" %>
 <% end %>
 
-<%= column_chart Task.pluck(:task_name,:priority)%>
+<%= column_chart Task.pluck(:name,:unit_price)%>
 
-<h1>Labels</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @labels.each do |label| %>
-      <tr>
-        <td><%= label.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<h1>Tasks</h1>
+<h1>Equipments</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Task name</th>
-      <th>Task detail</th>
-        <th>Expiration date</th>
-        <th>Status</th>
-        <th>Priority</th>
-        <th>Labels</th>
+      <th>Equipment Name</th>
+      <th>Quantity</th>
+        <th>Unit Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -49,20 +24,9 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= task.task_name %></td>
-        <td><%= task.task_detail %></td>
-        <td><%= task.expiration_date %></td>
-        <td><%= task.status %></td>
-        <% if task.priority==1 %>
-            <td>High</td>
-        <% elsif task.priority==2%>
-            <td>Medium</td>
-        <% elsif task.priority==3 %>
-            <td>Low</td>
-        <% end %>
-        <td><% task.labels.each do |label| %>
-        <li><%= label.name %></li>
-        <% end %></td>
+        <td><%= task.name %></td>
+        <td><%= task.quantity%></td>
+        <td><%= task.unit_price%></td>
               <td>
         <button type="button" class="btn btn-warning btn-xs"><%= link_to 'Show', task %></button>
         <button type="button" class="btn btn-primary btn-xs"><%= link_to 'Edit', edit_task_path(task) %></button>

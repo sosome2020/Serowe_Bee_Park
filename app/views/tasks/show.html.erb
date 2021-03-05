@@ -1,41 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Task name:</strong>
-  <%= @task.task_name %>
+  <strong>Equipment Name:</strong>
+  <%= @task.name %>
 </p>
 
 <p>
-  <strong>Task detail:</strong>
-  <%= @task.task_detail %>
+  <strong>Quantity:</strong>
+  <%= @task.quantity %>
 </p>
 
 <p>
-  <strong>Expiration date:</strong>
-  <%= @task.expiration_date %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @task.status%>
-</p>
-
-<p>
-  <strong>Priority:</strong>
-  <% if @task.priority==1 %>
-      <td>High</td>
-  <% elsif @task.priority==2%>
-      <td>Medium</td>
-  <% elsif @task.priority==3 %>
-      <td>Low</td>
-  <% end %>
-</p>
-
-<p>
-<strong>Labels:</strong>
-  <% @task.labels.each do |label| %>
-  [<%= label.name %>]
-  <% end %>
+  <strong>Unit Price:</strong>
+  <%= @task.unit_price %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |

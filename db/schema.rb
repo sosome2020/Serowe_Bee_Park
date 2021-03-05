@@ -33,18 +33,16 @@ ActiveRecord::Schema.define(version: 2021_01_24_124604) do
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string "task_name", null: false
-    t.text "task_detail", null: false
-    t.datetime "expiration_date", default: "2021-01-27 00:00:00"
+    t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "status"
-    t.integer "priority"
+    t.integer "quantity"
+    t.integer "unit_price"
     t.string "search"
     t.bigint "user_id"
+    t.index ["name"], name: "index_tasks_on_name"
     t.index ["search"], name: "index_tasks_on_search"
-    t.index ["status"], name: "index_tasks_on_status"
-    t.index ["task_name"], name: "index_tasks_on_task_name"
+    t.index ["unit_price"], name: "index_tasks_on_unit_price"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 

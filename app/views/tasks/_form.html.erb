@@ -12,42 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :task_name %>
-    <%= form.text_field :task_name %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :task_detail %>
-    <%= form.text_area :task_detail %>
+    <%= form.label :quantity %>
+    <%= form.text_area :quantity %>
   </div>
 
   <div class="field">
-    <%= form.label :expiration_date %>
-    <%= form.date_field :expiration_date %>
+    <%= form.label :unit_price %>
+    <%= form.text_field :unit_price %>
   </div>
-
-  <div>
-    <%= form.label :status %>
-    <%= form.select :status,['Started','In-progress','Completed']%>
-  </div>
-
-  <div>
-    <%= form.label :priority%>
-    <%= form.select :priority, [['High','1'], ['Medium','2'], ['Low', '3']]%>
-  </div>
-
-  <div>
-     <% if logged_in? %>
-       <% Label.all.each do |label| %>
-         <% if current_user.id == label.user_id %>
-           <div class="row ml-4">
-             <%= form.check_box :label_ids, { multiple: true, checked: label[:checked], disabled: label[:disabled], include_hidden: false }, label[:id] %>
-             <%= form.label:name, label.name %>
-           </div>
-         <% end %>
-       <% end %>
-     <% end %>
-     <div>
 
 <div class="actions">
     <%= form.submit %>
