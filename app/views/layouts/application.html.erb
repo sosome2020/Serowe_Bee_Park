@@ -12,8 +12,8 @@
   <body>
     <header class="header">
       <div class="first">
-        <button type="button" class="btn btn-warning btn-xs"><%= link_to "Task", tasks_path %></button>
-      <button type="button" class="btn btn-primary btn-xs"><%= link_to "New Task", new_task_path %></button>
+        <button type="button" class="btn btn-warning btn-xs"><%= link_to "Equipment", tasks_path %></button>
+      <button type="button" class="btn btn-primary btn-xs"><%= link_to "New Equipment", new_task_path %></button>
       </div>
     </header>
       <% flash.each do |key, value| %>
@@ -22,10 +22,10 @@
       <% if logged_in? %>
       <%= link_to "Home Page", user_path(current_user.id) %>
       <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-      <%= link_to "Tasks List", tasks_path(current_user.id) %>
+      <%= link_to "Equipments List", tasks_path(current_user.id) %>
       <%= link_to "Labels", labels_path %>
       <% if current_user.admin? %>
-      <%= link_to "User Management", admin_users_path(current_user.id)%>
+      <%= link_to "User/Role Management", admin_users_path(current_user.id)%>
       <% end %>
       <% else %>
       <%= link_to "Sign up", new_user_path %>

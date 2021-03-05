@@ -8,8 +8,10 @@
 <th>UserID</th>
 <th>Username</th>
 <th>Email</th>
+<th>Phone Number</th>
 <th>User admin priviledges </th>
-<th>Number of Tasks</th>
+<th>Number of Equipments</th>
+<th>Role</th>
 <th></th>
 <th colspan="4"></th>
 </tr>
@@ -20,8 +22,10 @@
 <td><%= user.id %></td>
 <td><%= link_to user.name, admin_user_path(user.id) %></td>
 <td><%= user.email %></td>
+<td><%= user.phone_number %></td>
 <td><%= user.admin? ? "Yes":"No" %></td>
 <td><%= user.tasks.count %></td>
+<td><%= user.user_role %></td>
 <td><%= link_to 'Show', admin_user_path(user.id), class: "btn btn-outline primary"
 %></td>
 <td><%= link_to 'Edit', edit_admin_user_path(user.id), data: { confirm:'Are you sure?' }, class: "btn btn-outline-success" %></td>

@@ -3,7 +3,7 @@ before_action :if_not_admin
 before_action :set_user, only: [:show, :edit, :update,:destroy]
   def index
     @users = User.select(:id, :name, :email,
-    :admin).order(created_at: :asc)
+    :admin, :user_role, :phone_number).order(created_at: :asc)
   end
 
   def new
@@ -64,6 +64,6 @@ before_action :set_user, only: [:show, :edit, :update,:destroy]
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :admin, :title)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :admin, :title,:user_role,:phone_number)
   end
   end

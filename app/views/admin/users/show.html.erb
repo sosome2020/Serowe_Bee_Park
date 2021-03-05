@@ -15,13 +15,22 @@
 <td><%= @user.email %></td>
 </tr>
 <tr>
-<th>Number of tasks</th>
+<th>Phone Number</th>
+<td><%= @user.phone_number %></td>
+</tr>
+<tr>
+<th>Number of Equipments</th>
 <td><%= @user.tasks.count %></td>
 </tr>
 <tr>
 <th>User admin priviledges</th>
 <td><%= @user.admin? ? "Yes":"No" %></td>
 </tr>
+<tr>
+<th>Role</th>
+<td><%= @user.user_role %></td>
+</tr>
+
 <tr>
 <th> <%= link_to 'Return', admin_users_path %></th>
 </tr>
@@ -33,21 +42,17 @@
 <table class="table table-striped">
 <thead>
 <tr>
-<th>Task Name</th>
-<th>Task Detail</th>
-<th>Expiration date</th>
-<th>Status</th>
-<th>Priority</th>
+<th>Equipment Name</th>
+<th>Quantity</th>
+<th>Unit Price</th>
 </tr>
 </thead>
 <tbody>
 <% @tasks.each do |task| %>
 <tr>
-<td><%= task.task_name %></td>
-<td><%= task.task_detail %></td>
-<td><%= task.expiration_date %></td>
-<td><%= task.status %></td>
-<td><%= task.priority %></td>
+<td><%= task.name %></td>
+<td><%= task.quantity %></td>
+<td><%= task.unit_price%></td>
 </tr>
 <% end %>
 </tbody>
