@@ -8,4 +8,7 @@ Rails.application.routes.draw do
     resources :users, only:[:index, :edit, :update, :new, :create, :show, :destroy]
     resources :labels
   end
+  resources :tasks do
+    resources :comments
+end
 end

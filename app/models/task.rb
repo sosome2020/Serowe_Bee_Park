@@ -7,4 +7,6 @@ class Task < ApplicationRecord
   belongs_to :user, optional: true
   has_many :labellings,dependent: :destroy
   has_many :labels, through: :labellings
+  has_many :comments, dependent: :destroy
+  has_many :users, through: :comments
 end

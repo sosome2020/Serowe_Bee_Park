@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :labels, dependent: :destroy
   before_destroy :must_not_destroy_last_admin
   validates :user_role, presence: true
+  has_many :comments, dependent: :destroy
   private
   def must_not_destroy_last_admin
     throw(:abort) if User.where(admin: true).count <= 1 && self.admin == true

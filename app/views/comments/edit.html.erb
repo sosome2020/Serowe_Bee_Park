@@ -1,0 +1,10 @@
+<center>
+<h1>Edit Comment For <%= @task.name %></h1>
+<%= form_with(model: [@task,@comment], local: true) do |f| %>
+<div class="field">
+<%= f.label :message %>
+<%= f.text_area :message, required: true, placeholder: "Message", rows: 10%>
+</div>
+<%= f.submit %>
+<% end %>
+</center>

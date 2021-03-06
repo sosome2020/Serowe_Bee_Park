@@ -17,6 +17,7 @@ PER=3
   end
 
   def show
+    @comments = @task.comments.all.order("created_at")
     if current_user.id != @task.user_id
     flash[:notice] = "Not Allowed!"
     redirect_to tasks_path(session[:task_user])

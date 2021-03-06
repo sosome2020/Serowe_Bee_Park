@@ -23,7 +23,6 @@
       <%= link_to "Home Page", user_path(current_user.id) %>
       <%= link_to "Logout", session_path(current_user.id), method: :delete %>
       <%= link_to "Equipments List", tasks_path(current_user.id) %>
-      <%= link_to "Labels", labels_path %>
       <% if current_user.admin? %>
       <%= link_to "User/Role Management", admin_users_path(current_user.id)%>
       <% end %>

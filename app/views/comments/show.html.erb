@@ -1,26 +1,4 @@
-<center>
-<p id="notice"><%= notice %></p>
-<p>
-<strong>Equipment Name:</strong>
-<%= @task.name %>
-</p>
-<p>
-<strong>Quantity:</strong>
-<%= @task.quantity %>
-</p>
-<p>
-<strong>Unit Price:</strong>
-<%= @task.unit_price %>
-</p>
-<tr>
-<td><button type="button" class="btn btn-primary btn-xs"><%= link_to 'Edit',
-edit_task_path(@task) %></button></td>
-<td><button type="button" class="btn btn-warning btn-xs"><%= link_to 'Back',
-edit_task_path(@task) %></button></td>
-</tr>
-<button type="button" class="btn btn-success btn-xs"><%= link_to "Add
-Comment", new_task_comment_path(@task) %></button>
-</center>
+<h1>Equipment <%= @task.name%></h1>
 <div class="notes-container">
 <p><%= @comments.length <= 0 ? "No Comments found": ""%></p>
 <% @comments.each do |comment| %>
