@@ -1,0 +1,24 @@
+<center>
+<span class="doctor-show-header"><h1> Meeting</h1></span>
+<button type="button" class="btn btn-success btn-xs"><%= link_to "Return",
+appointments_path %></button>
+<br />
+<br />
+<hr />
+<table class="ui celled table">
+<thead>
+<th>Name</th>
+<th>Phone</th>
+<th>Appointment Date</th>
+<th>Appointment Time</th>
+</thead>
+<tbody>
+<tr>
+<td><%= @appointment.user.name%></td>
+<td><%= @appointment.user.phone_number%></td>
+<td><%= @appointment.date.try(:strftime, '%a, %b %d, %Y') %></td>
+<td><%= @appointment.time.try(:strftime, "%l:%M %p") %></td>
+</tr>
+</tbody>
+</table>
+</center>

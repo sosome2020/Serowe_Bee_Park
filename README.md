@@ -23,16 +23,17 @@ Rails 6.1.3
 - [ ] Login function
 - [ ] User registration function
   - [ ] Email address, name and password are required
-- [ ] farmer's list display function
 - [ ] Pagination function
+- [ ] User's(farmers & stakeholder) list display function
 - [ ] farmer edit function
 - [ ] farmer deletion function
-- [ ] farmer's search function
+- [ ] Equipment search function
 - [ ] Graph display function
-- [ ] stakeholder's list display function
 - [ ] stakeholder's edit function
 - [ ] stakeholder's deletion function
 - [ ] appointment function
+- [ ] comment function
+- [ ] sort function
 
 ## Catalog design
 https://drive.google.com/file/d/1_FjYidbTcF3nXKeuPoklIfv0zXIZsNtp/view?usp=sharing

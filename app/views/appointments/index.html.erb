@@ -1,0 +1,28 @@
+<span class="doctor-show-header"><h1>Meetings</h1><h3></h3></span>
+<button type="button" class="btn btn-success btn-xs"><%= link_to "New Meeting",
+new_appointment_path %></button>
+<%= paginate @appointments %>
+<table class="ui celled table">
+<thead>
+<th> Meeting with</th>
+<th>Phone Number</th>
+<th>Date</th>
+<th>Time</th>
+<th>Remove</th>
+<th>Show</th>
+</thead>
+<tbody>
+<% @appointments.each do |appt| %>
+<tr>
+<td><%= link_to appt.user.name%></td>
+<td><%= appt.user.phone_number %></td>
+<td><%= appt.date.try(:strftime, '%a, %b %d, %Y') %></td>
+<td><%= appt.time.try(:strftime, "%l:%M %p") %></td>
+<td><%= button_to 'Cancel', user_appointment_path(appt.user_id, appt.id), method:
+:delete, class:"ui button red inverted" %></td>
+<td><%= link_to 'Show', appointment_path(appt), class:"ui button blue inverted" %>
+</td>
+</tr>
+<% end %>
+</tbody>
+</table>

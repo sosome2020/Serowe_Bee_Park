@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   resources :tasks do
     resources :comments
 end
+resources :appointments
+resources :users do
+  resources :appointments, only: [:index, :show, :new, :create, :destroy]
+end
 end
