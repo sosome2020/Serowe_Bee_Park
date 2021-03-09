@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_101702) do
     t.integer "quantity"
     t.integer "unit_price"
     t.string "search"
+    t.text "image"
     t.bigint "user_id"
     t.index ["name"], name: "index_tasks_on_name"
     t.index ["search"], name: "index_tasks_on_search"

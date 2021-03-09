@@ -6,6 +6,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.integer :quantity
       t.integer :unit_price
       t.string :search
+      t.text :image 
     end
   end
 end

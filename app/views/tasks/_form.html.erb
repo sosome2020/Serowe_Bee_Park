@@ -26,7 +26,13 @@
     <%= form.text_field :unit_price %>
   </div>
 
+  <div class="field">
+     <%= form.label :image %>
+     <%= form.file_field :image %>
+       <%= form.hidden_field :image_cache %>
+   </div>
+
 <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Create Equipment'%>
   </div>
 <% end %>

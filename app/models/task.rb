@@ -1,4 +1,5 @@
 class Task < ApplicationRecord
+  mount_uploader :image, ImageUploader
   validates :name,  presence: true
   validates :quantity,  presence: true
   validates :unit_price, presence: true , numericality: { only_integer: true}

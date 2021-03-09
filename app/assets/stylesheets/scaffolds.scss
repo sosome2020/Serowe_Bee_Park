@@ -72,7 +72,7 @@ img {width:120px;
 }
 
 .header {
-  background-color: #ea72a8;
+  background-color: #BDB76B;
   height: 80px;
   font-size: 1.0rem;
 }
@@ -178,4 +178,15 @@ padding: 0 1em;
 display: inline-block;
 width: 18%;
 position: unset;
+}
+
+img {width:120px;
+  height: 80px
+}
+
+.image_tag{
+  //padding: 10px;
+  //margin-bottom: 10px;
+  width: 50%;
+  height: 10px;
 }

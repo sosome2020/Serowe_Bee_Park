@@ -14,6 +14,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Equipment Name</th>
       <th>Quantity</th>
         <th>Unit Price</th>
@@ -24,6 +25,7 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
+        <td><%=image_tag task.image.url%></td>
         <td><%= task.name %></td>
         <td><%= task.quantity%></td>
         <td><%= task.unit_price%></td>

@@ -1,6 +1,10 @@
 <center>
 <p id="notice"><%= notice %></p>
 <p>
+  <strong>Image:</strong>
+  <%= image_tag @task.image.url %>
+</p>
+<p>
 <strong>Equipment Name:</strong>
 <%= @task.name %>
 </p>

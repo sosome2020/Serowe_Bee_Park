@@ -90,6 +90,6 @@ def authenticate_user
 end
 
 def task_params
-  params.require(:task).permit(:name, :unit_price, :quantity, :priority, { label_ids: [] },:label_id)
+  params.require(:task).permit(:name, :unit_price, :quantity, :priority, :image, { label_ids: [] },:label_id)
 end
 end
