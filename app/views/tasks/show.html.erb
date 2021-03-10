@@ -2,7 +2,9 @@
 <p id="notice"><%= notice %></p>
 <p>
   <strong>Image:</strong>
+  <% if @task.image.url %>
   <%= image_tag @task.image.url %>
+  <% end %>
 </p>
 <p>
 <strong>Equipment Name:</strong>

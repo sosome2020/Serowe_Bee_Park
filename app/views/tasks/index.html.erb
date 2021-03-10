@@ -25,8 +25,12 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-      
-        <td><%= task.name %></td>
+        <td>
+         <% if task.image.url %>
+         <%= image_tag task.image.url %>
+         <% end %>
+         </td>
+          <td><%= task.name %></td>
         <td><%= task.quantity%></td>
         <td><%= task.unit_price%></td>
               <td>

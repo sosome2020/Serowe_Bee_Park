@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_101702) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.text "message"
+    t.text "message", null: false
     t.bigint "user_id", null: false
     t.bigint "task_id", null: false
     t.datetime "created_at", precision: 6, null: false
