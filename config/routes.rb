@@ -15,4 +15,5 @@ resources :appointments
 resources :users do
   resources :appointments, only: [:index, :show, :new, :create, :destroy]
 end
+mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end

@@ -30,6 +30,7 @@ end
 def create
   @appointment = Appointment.new(appointment_params)
   if @appointment.save
+    AppointmentMailer.appointment_mail(@appointment).deliver
     redirect_to appointments_path
   else
     render :new

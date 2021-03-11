@@ -1,0 +1,4 @@
+<h1>An Appointment with you has been set</h1>
+<p>Date: <%= @appointment.date %></p>
+<p>Time: <%= @appointment.time.try(:strftime, "%l:%M %p") %></p>
+<p>Please make sure you join as it will be very important. </p>
