@@ -1,39 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bee Keeping</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <header class="header">
-      <div class="first">
-        <button type="button" class="btn btn-warning btn-xs"><%= link_to "Equipment", tasks_path %></button>
-      <button type="button" class="btn btn-primary btn-xs"><%= link_to "New Equipment", new_task_path %></button>
-      </div>
-    </header>
-      <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-      <% end %>
-      <% if logged_in? %>
-      <%= link_to "Home Page", user_path(current_user.id) %>
-      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-      <%= link_to "Equipments List", tasks_path(current_user.id) %>
-      <%= link_to 'Meetings', appointments_path%>
-      <% if current_user.admin? %>
-      <%= link_to "User/Role Management", admin_users_path(current_user.id)%>
-      <% end %>
-      <% else %>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Login", new_session_path %>
-      <% end %>
-    <%= yield %>
-    <footer class="footer">
-    <p>Copyright © 2020 Serowe bee park, All RIGHTS RESERVED.</p>
-  </footer>
-  </body>
+<head>
+<title>Bee Keeping</title>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<% flash.each do |key, value| %>
+<%= content_tag(:div, value, class: "#{key}") %>
+<% end %>
+<%# bootstrap navbar %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<%# <nav class="navbar navbar-light bg-light" style="width: 100vw"> %>
+<nav class="navbar navbar-dark bg-dark" style="width: 100vw">
+<a class="navbar-brand" href="/">
+<span class="farmersmart">BeeKeeping</span>
+</a>
+<%# </nav> %>
+<button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#
+navbarSupportedContent" aria-controls="navbarSupportedContent" ariaexpanded="
+false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item ">
+<% if logged_in? %>
+<a class="nav-link" ><%= link_to "Home Page", user_path(current_user.id) %></a>
+<a class="nav-link"><%= link_to "Equipments List", tasks_path(current_user.id)
+%></a>
+<a class="nav-link" ><%= link_to 'Meetings', appointments_path%></a>
+<% end %>
+</li>
+</ul>
+<% if logged_in? %>
+<ul>
+<%= link_to "New Equipment", new_task_path %>
+</ul>
+<ul>
+<%= link_to "Logout", session_path(current_user.id), method: :delete %>
+</ul>
+<% if current_user.admin? %>
+<ul>
+<%= link_to "User/Role Management", admin_users_path(current_user.id)%>
+</ul>
+<% end %>
+<% else %>
+<ul>
+<%= link_to "Sign up", new_user_path %>
+</ul>
+<ul>
+<%= link_to "Login", new_session_path %>
+</ul>
+<% end %>
+</div>
+</nav>
+</nav>
+<%= yield %>
+<footer class="footer">
+<%# bootstrap navbar %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<%# <nav class="navbar navbar-light bg-light" style="width: 100vw"> %>
+<nav class="navbar navbar-dark bg-dark" style="width: 100vw">
+<a class="navbar-brand" href="/">
+<div class='test'>
+Copyright © 2020 Serowe bee park, All RIGHTS RESERVED.</div>
+</a>
+<%# </nav> %>
+</footer>
+</body>
 </html>
